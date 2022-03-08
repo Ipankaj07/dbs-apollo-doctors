@@ -20,7 +20,7 @@ router.post('/add', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-        const clinics = await Clinic.find();
+        const clinics = await Clinic.find().populate('doctors');
         res.status(200).json({
             message: 'Clinics fetched successfully',
             clinics

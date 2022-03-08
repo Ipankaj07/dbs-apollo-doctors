@@ -1,14 +1,3 @@
-/* doctor details  */
-/* 
-name 
-speciality
-availability
-cost per appointement
-max no of appointements
-gender
-degree
-*/
-
 const mongoose = require("mongoose");
 
 const doctorSchema = new mongoose.Schema({
