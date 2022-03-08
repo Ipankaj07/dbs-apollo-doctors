@@ -6,6 +6,14 @@ const doctorController = require("./controllers/doctor.controller");
 const app = express();
 app.use(express.json());
 
+/* cors */
+const cors = require("cors");
+app.use(cors({
+    origin: "*",
+    credentials: true
+}));
+
+
 app.use("/clinic", clinicController);
 app.use("/doctor", doctorController);
 
