@@ -97,6 +97,22 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+/* patch */
+router.patch('/:id', async (req, res) => {
+    try {
+        const updatedDoctor = await Doctor.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.status(200).json({
+            message: 'Doctor updated successfully',
+            updatedDoctor
+        })
+    } catch (err) {
+        res.status(500).json({
+            message: 'Doctor not updated',
+            err
+        })
+    }
+});
+
 router.delete('/:id', async (req, res) => {
     try {
         await Doctor.findByIdAndDelete(req.params.id);

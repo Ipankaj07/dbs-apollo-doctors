@@ -8,7 +8,8 @@ const doctorSchema = new mongoose.Schema({
     max_no_of_appointements: { type: Number, required: true },
     gender: { type: String, required: true },
     experience: { type: String, required: true },
-    image: { type: String, required: true }
+    image: { type: String, required: true },
+    users: { type: Array }
 }, {
     versionKey: false,
     timestamps: true,
