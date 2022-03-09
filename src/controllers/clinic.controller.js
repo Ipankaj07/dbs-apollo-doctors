@@ -48,7 +48,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+/* router.delete('/:id', async (req, res) => {
     try {
         const clinic = await Clinic.findByIdAndDelete(req.params.id);
         res.status(200).json({
@@ -61,6 +61,6 @@ router.delete('/:id', async (req, res) => {
             err
         })
     }
-});
+}); */
 
 module.exports = router;

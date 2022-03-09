@@ -82,7 +82,7 @@ router.get('/speciality-:speciality/gender-:gender', async (req, res) => {
     }
 })
 
-router.put('/:id', async (req, res) => {
+/* router.put('/:id', async (req, res) => {
     try {
         const updatedDoctor = await Doctor.findByIdAndUpdate(req.params.id, req.body, { new: true });
         res.status(200).json({
@@ -95,7 +95,7 @@ router.put('/:id', async (req, res) => {
             err
         })
     }
-});
+}); */
 
 /* patch */
 router.patch('/:id', async (req, res) => {
@@ -113,7 +113,7 @@ router.patch('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+/* router.delete('/:id', async (req, res) => {
     try {
         await Doctor.findByIdAndDelete(req.params.id);
         res.status(200).json({
@@ -125,6 +125,6 @@ router.delete('/:id', async (req, res) => {
             err
         })
     }
-});
+}); */
 
 module.exports = router;
